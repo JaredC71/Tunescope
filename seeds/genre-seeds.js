@@ -1,4 +1,5 @@
-const { Genre } = require('../models');
+const sequelize = require("../config/connection");
+const { Genre } = require("../models");
 
 const genreData = [
   {
@@ -30,6 +31,8 @@ const genreData = [
   },
 ];
 
-const seedGenres = () => genre.bulkCreate(genreData);
+const seedGenres = async () =>  {
+  await sequelize.sync({force: true})
+  await Genre.bulkCreate(genreData)}
 
-module.exports = seedGenres;
+ module.exports = seedGenres;

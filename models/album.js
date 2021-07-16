@@ -28,7 +28,6 @@ Album.init(
 
     released: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
 
     label: {
@@ -47,17 +46,17 @@ Album.init(
     },
 
     amazon_image_link: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: true,
     },
 
     amazon_link: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: true,
     },
 
     spotify_embed: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
 
